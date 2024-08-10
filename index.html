@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gerenciamento de Eventos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Logotipo do Site" id="logo">
+        <nav>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="intro">
+        <div class="container">
+            <h1>Bem-vindo ao Sistema de Gerenciamento de Eventos</h1>
+            <p>Baseada na metodologia atender bem para atender sempre, nosso sistema se preocupa com a satisfação do cliente em primeiro lugar.</p>
+        </div>
+    </section>
+
+    <section id="event-form">
+        <div class="container">
+            <h2>Criar Novo Evento</h2>
+            <form id="createEventForm">
+                <label for="eventName">Nome do Evento:</label>
+                <input type="text" id="eventName" name="eventName" required>
+                
+                <label for="eventDate">Data do Evento:</label>
+                <input type="date" id="eventDate" name="eventDate" required>
+                
+                <label for="eventDescription">Descrição do Evento:</label>
+                <textarea id="eventDescription" name="eventDescription" required></textarea>
+                
+                <button type="submit" class="btn-green">Criar Evento</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="event-actions">
+        <div class="container">
+            <h2>Ações</h2>
+            <button id="clearListButton" class="btn">Limpar Lista</button>
+            <button id="saveToDBButton" class="btn">Armazenar em Banco de Dados</button>
+        </div>
+    </section>
+
+    <section id="event-search">
+        <div class="container">
+            <h2>Buscar Eventos</h2>
+            <label for="searchName">Buscar por Nome:</label>
+            <input type="text" id="searchName">
+            <button id="searchNameButton" class="btn">Buscar</button>
+
+            <label for="searchDate">Buscar por Data:</label>
+            <input type="date" id="searchDate">
+            <button id="searchDateButton" class="btn">Buscar</button>
+        </div>
+    </section>
+
+    <section id="event-list">
+        <div class="container">
+            <h2>Lista de Eventos</h2>
+            <ul id="events"></ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sistema de Gerenciamento de Eventos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
